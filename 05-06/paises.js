@@ -6,8 +6,7 @@ function getCountry (){
     // Função trim() remove espaços em branco antes e depois da string
     let url = `https://restcountries.com/v3.1/name/${input_search}`;
     let output = document.querySelector("country-info");
-
-    output.innerHTML = "<h3>Carregando...</h3>"
+    output.innerHTML = "<h3>Carregando...</h3>";
 
     fetch(url)
     .then(resp=>{
