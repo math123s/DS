@@ -1,52 +1,36 @@
 class Veiculo{
    
- set _modelo(_modelo){
+ set modelo(valor){
     this._modelo = valor
  }
 
-    get _modelo(){
+    get modelo(){
         return this._modelo
     }
 
- set _marca(_marca){
+ set marca(valor){
        this._marca = valor
  }
     
-    get _marca(){
+    get marca(){
          return this._marca
     } 
 
-set _ano(_ano){
+set ano(valor){
      this._ano = valor
 }
      
-    get _ano(){
+    get ano(){
          return this._ano
     } 
 
-set _portas(_portas){
-        this._portas = valor
-}
-    get _portas(){
-        return this._portas
+    informacoes() {
+       return "Marca: "+this.modelo+"Modelo: "+this.marca+"ano: "+this.ano+"Numero de portas: "+this.portas
     }
-
-    _informacoes() {
-        console.log("Marca: "+this._modelo)
-        console.log("ModelO: "+this._marca)
-        console.log("ano: "+this._ano)
-        console.log("Numero de portas: "+this._portas)
-    }
-
-    abrirPortas(){
-        _informacoes()
-        "<br>"
-        _ligar()
-        "<br>"
        
-    }
+    
 
-    _ligar(){
-        console.log(this.veiculo+"Foi ligado")
+    ligar(){
+        console.log("Seu carro foi ligado");
     }
 }
