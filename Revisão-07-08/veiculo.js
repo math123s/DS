@@ -43,7 +43,7 @@ set _portas(_portas){
         "<br>"
         _ligar()
         "<br>"
-
+       
     }
 
     _ligar(){
