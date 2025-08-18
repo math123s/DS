@@ -1,4 +1,5 @@
 class Pokemon{
+        // pegado os topicos do pokemon
     set nome(valor){
         this._nome = valor;
     }
@@ -30,6 +31,7 @@ class Pokemon{
         return this._sprite;
     }
 
+    //funcao que exibe os dados do pokemon
     exibirDados(){
         return `${this._nome} 
         - ${this._tipo} 
