@@ -17,7 +17,7 @@ class Pokemon{
     }
 
     set peso(valor){
-        this._peso = valor
+        this._peso = valor;
     }
     get peso(){
         return this._peso;
@@ -33,10 +33,10 @@ class Pokemon{
 
     //funcao que exibe os dados do pokemon
     exibirDados(){
-        return `${this._nome} 
-        - ${this._tipo} 
-        - ${this._peso} 
-        - ${this._sprite}`;
+        return ` O nome do seu pokemon é: ${this._nome};
+        - O tipo do seu pokemon é: ${this._tipo};
+        - Os kilos do seu pokemon é: ${this._peso}kg;
+        - A imagen do seu pokemon: <br> ${this._sprite}`;
 
         
     }

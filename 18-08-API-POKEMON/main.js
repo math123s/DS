@@ -4,7 +4,7 @@ function buscarPokemon(){
 
 //serve para realizar requisições HTTP assíncronas,
 // permitindo que sua aplicação web busque recursos de um servidor ou de outras fontes externas
-fetch(`https://pokeapi.co/api/v2/pokemon/ditto/${pkm_name}`)
+fetch(`https://pokeapi.co/api/v2/pokemon/${pkm_name}`)
     .then(resposta => {
         if(!resposta.ok){
         throw new Error("Pokemon não encontrado");
@@ -21,12 +21,11 @@ fetch(`https://pokeapi.co/api/v2/pokemon/ditto/${pkm_name}`)
             // console.log(p.exibirDados());
 
             //Resposta do servidor com nome,tipo, peso e foto/sprite
-            document.getElementById("resultado").innerHMTL = 
-            `<h1>${p.nome}</h1> 
-            <li>Tipo:${p.tipo} </li>
-            <li>Peso:${p.peso} </li>
-            </ul>
-            <img src="${p.sprite}>`
+    document.getElementById("resultado").innerHTML = `<h1>${p.nome}</h1> 
+           <p>Tipo:${p.tipo} </p>
+            <p>Nome:${p.nome} </p>
+            <p>Peso:${p.peso} kg </p>
+            <img src="${p.sprite}>`;
 
         })
         //senão pegar o alerta de erro
