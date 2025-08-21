@@ -1,3 +1,48 @@
 body{
     background-color: rgb(106, 106, 155);
 }
+
+.poke_up{
+display: flex;
+justify-content: center;
+width: 100%;
+margin: none ;
+border: none;
+background-color: red;
+height: 500px;
+}
+
+.poke_dow{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    height: 350px;
+}
+.titulo{
+    height: 120px;
+ background-color: rgb(2, 226, 13);
+ width: 120px;
+}
+
+.center{
+    width: 100%;
+    background-color: black;
+    border: 10px solid rgb(7, 7, 7);
+}
+
+.enviar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.poke_dow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
