@@ -31,6 +31,32 @@ class Pokemon{
         return this._sprite;
     }
 
+    set ataque(valor){
+        this._ataque = valor;
+    }
+
+    get ataque(){
+        return this._ataque;
+    }
+
+    set defesa(valor){
+        this._defesa = valor;
+    }
+
+    get defesa(){
+        return this._defesa;
+    }
+
+    set hp(valor){
+        this._hp = valor;
+    }
+    
+    get hp(){
+        return this.hp;
+    }
+
+
+
     //funcao que exibe os dados do pokemon
     exibirDados(){
         return ` O nome do seu pokemon é: ${this._nome};
