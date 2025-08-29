@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <title>Página inicial</title>
+</head>
+<body>
+    <div class="d-flex alingn-items-center">
+    <div class="poke_up">
+        <div class="titulo">
+    <h1>API do Pokemon</h1>
+</div>
+    <br>
+    <br>
+    <div class="caixa_da_briga">
+    <div class="inputs">
+<input type="text" id="pkm_name" placeholder="Insira o nome do pokemon">
+
+
+<button type="button" onclick="buscarPokemon()" class="btn btn-outline-danger">Buscar pokemon</button>
+
+<div id="resultado">...</div>
+<progress id="hp1" value="0" max="100"></progress>
+</div>
+<br>
+<div class="center">    
+<h2>Log de batalha</h2>
+<button onclick="batalhar()">Iniciar batalha</button>
+<div class="resultadoBatalha">...</div>
+<div class="resultadoLog">...</div>
+ <br>
+<br>
+<div class="poke_dow">
+<input type="text" id="pkm_name2" placeholder="Insira o nome do pokemon">
+<button onclick="buscarPokemon2()">Buscar</button>
+<div id="resultado2">...</div>
+<progress id="hp2" value="0" max="100"></progress>
+</div>
+</div>
+</div>
+    <script src="Pokemon.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
