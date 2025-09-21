@@ -1,33 +1,80 @@
-body{	
-    background-color: #b02443;
-}	
-
-.titulo{
-    height: 100%;
-    width: 1250px;
-     background-color:#740916;
-     color: #fff;
-    margin: 10px;
-    margin-right: 150px;
-    display: flex;
-    justify-content: center;
-    border: 10px solid #600007;
-    border-radius: 20px;
+/* Configurações básicas do corpo */
+body {
+    font-family: Arial, sans-serif;
+    background: #fff0f0; /* fundo suave */
+    text-align: center;
+    padding: 20px;
 }
 
+/* Cores de títulos */
+h1,h2,h3 { 
+    color: #b91c1c; 
+    margin-bottom:10px; 
+}
 
-.inputs{
-    display: flex;
-    justify-content: center; 
-    padding: 10px;   
- padding: 10xp;
- width: 1235px;
- height: 100px;
- background-color: #740916;
- border:10px solid #600007;
- margin: 30px;
- margin-right: 30px;
-/* margin-right: -20px;*/
- border-radius: 20px;
- 
+/* Painéis de conteúdo */
+.panel {
+    background: #fff;
+    border: 2px solid #b91c1c;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+/* Inputs e botões */
+input, select, button { 
+    padding:5px 10px; 
+    margin:4px; 
+    border-radius:5px; 
+    border:1px solid #b91c1c;
+}
+
+/* Botões estilo principal */
+button { 
+    background:#b91c1c; 
+    color:#fff; 
+    cursor:pointer; 
+}
+
+/* Botão ao passar mouse */
+button:hover { 
+    background:#e11d48; 
+}
+
+/* Barra de vida dos Pokémons */
+.progress-bar { 
+    width:150px; 
+    height:20px; 
+    background:#ddd; 
+    border-radius:10px; 
+    margin:5px auto; 
+}
+
+/* Preenchimento da barra de vida */
+.progress-fill { 
+    background:#1e40af; 
+    height:100%; 
+    width:100%; 
+    border-radius:10px; 
+    transition:width 0.5s; /* animação suave */
+}
+
+/* Imagem do Pokémon */
+.pokemon-img { 
+    width:100px; 
+}
+
+/* Layout flexível para exibir os Pokémons lado a lado */
+.flex-container { 
+    display:flex; 
+    justify-content:center; 
+    align-items:center; 
+    gap:40px; 
+    margin-top:10px; 
+}
+
+/* Itens da lista de treinadores e histórico */
+.list-item { 
+    text-align:left; 
+    margin:4px 0; 
 }

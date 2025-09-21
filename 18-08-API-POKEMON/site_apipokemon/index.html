@@ -1,48 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
-    <title>Página inicial</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simulador Pokémon Completo</title>
+<link rel="stylesheet" href="style.css">
+<script src="pokemon.js"></script>
+<script src="main.js"></script>
 </head>
 <body>
-    <div class="d-flex alingn-items-center">
-    <div class="poke_up">
-        <div class="titulo">
-    <h1>API do Pokemon</h1>
+
+<h1>Simulador Pokémon</h1>
+
+<!-- Cadastro Treinador -->
+<div class="panel">
+<h2>Cadastrar Treinador</h2>
+<label>Nome:</label><input type="text" id="nomeTreinador">
+<label>Idade:</label><input type="number" id="idadeTreinador">
+<label>Cidade:</label><input type="text" id="cidadeTreinador">
+<button onclick="cadastrarTreinador()">Cadastrar</button>
 </div>
-    <br>
-    <br>
-    <div class="caixa_da_briga">
-    <div class="inputs">
-<input type="text" id="pkm_name" placeholder="Insira o nome do pokemon">
 
-
-<button type="button" onclick="buscarPokemon()" class="btn btn-outline-danger">Buscar pokemon</button>
-
-<div id="resultado">...</div>
-<progress id="hp1" value="0" max="100"></progress>
+<!-- Lista Treinadores -->
+<div class="panel">
+<h2>Treinadores Cadastrados</h2>
+<div id="listaTreinadores"></div>
 </div>
+
+<!-- Seleção de Pokémons -->
+<div class="panel">
+<h2>Selecionar Pokémons para Batalha</h2>
+<div>
+<label>Treinador 1:</label>
+<select id="treinador1"></select>
+<input type="text" id="pokemon1" placeholder="Nome Pokémon 1">
+<button onclick="selecionarPokemon1()">Selecionar</button>
 <br>
-<div class="center">    
-<h2>Log de batalha</h2>
-<button onclick="batalhar()">Iniciar batalha</button>
-<div class="resultadoBatalha">...</div>
-<div class="resultadoLog">...</div>
- <br>
-<br>
-<div class="poke_dow">
-<input type="text" id="pkm_name2" placeholder="Insira o nome do pokemon">
-<button onclick="buscarPokemon2()">Buscar</button>
-<div id="resultado2">...</div>
-<progress id="hp2" value="0" max="100"></progress>
+<label>Treinador 2:</label>
+<select id="treinador2"></select>
+<input type="text" id="pokemon2" placeholder="Nome Pokémon 2">
+<button onclick="selecionarPokemon2()">Selecionar</button>
 </div>
+
+<!-- Exibição de Pokémons e barras de vida -->
+<div class="flex-container">
+    <div>
+        <img id="sprite1" class="pokemon-img">
+        <div class="progress-bar"><div id="vida1" class="progress-fill"></div></div>
+    </div>
+    <div>
+        <img id="sprite2" class="pokemon-img">
+        <div class="progress-bar"><div id="vida2" class="progress-fill"></div></div>
+    </div>
 </div>
+
+<div>
+<button onclick="iniciarBatalha()">Iniciar Batalha</button>
+<button onclick="resetarBatalha()">Resetar</button>
 </div>
-    <script src="Pokemon.js"></script>
-    <script src="main.js"></script>
+
+<h3>Log da Batalha</h3>
+<div id="logBatalha"></div>
+<div id="vencedor"></div>
+
+<h3>Histórico de Batalhas</h3>
+<div id="historicoBatalhas"></div>
+
+<script src="script.js"></script>
 </body>
 </html>
