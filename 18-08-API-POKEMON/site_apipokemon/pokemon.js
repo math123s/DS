@@ -1,4 +1,4 @@
-// ==================== CLASSES ====================
+// Classes 
 
 // Classe Treinador
 class Treinador {
@@ -21,15 +21,15 @@ class Pokemon {
     }
 }
 
-// ==================== FUNÇÕES POKÉMON ====================
+//Funções do pokemon
 
 // Busca Pokémon na API do PokéAPI
 async function buscarPokemon(nome){
     try{
         let res = await fetch(`https://pokeapi.co/api/v2/pokemon/${nome.toLowerCase()}`);
-        if(!res.ok) throw new Error("Pokémon não encontrado");
+        if(!res.ok) return new Error("Pokémon não encontrado");
         let d = await res.json();
-        // Retorna um objeto Pokémon com atributos importantes
+        // Retorna um dos objetos Pokémon com atributos seus atributos 
         return new Pokemon(d.name, d.stats[0].base_stat, d.stats[1].base_stat, d.stats[2].base_stat, d.sprites.front_default);
     }catch(e){ 
         alert(e.message); 
@@ -37,7 +37,7 @@ async function buscarPokemon(nome){
 }
 
 // Seleciona Pokémon 1
-async function selecionarPokemon1(){
+  function selecionarPokemon1(){
     let nome = document.getElementById("pokemon1").value;
     if(!nome) return alert("Digite o Pokémon 1");
     pokemon1Selecionado = await buscarPokemon(nome);
@@ -46,7 +46,7 @@ async function selecionarPokemon1(){
 }
 
 // Seleciona Pokémon 2
-async function selecionarPokemon2(){
+ function selecionarPokemon2(){
     let nome = document.getElementById("pokemon2").value;
     if(!nome) return alert("Digite o Pokémon 2");
     pokemon2Selecionado = await buscarPokemon(nome);
